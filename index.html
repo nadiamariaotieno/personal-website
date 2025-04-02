@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav id="navbar">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="theme-toggle">🌙</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home Section -->
+    <section id="home">
+      <h1 id="greeting">Welcome!</h1>
+      <p>This is my personal website.</p>
+    </section>
+
+    <!-- About Me -->
+    <section id="about">
+      <h2>About Me</h2>
+      <img src="assets/profile.jpg" alt="Profile photo" />
+      <p>A short bio about me goes here.</p>
+
+      <h3>My Skills</h3>
+      <div class="skill">
+        <span>HTML</span>
+        <div class="bar"><div class="progress" data-value="90%"></div></div>
+      </div>
+      <div class="skill">
+        <span>CSS</span>
+        <div class="bar"><div class="progress" data-value="80%"></div></div>
+      </div>
+      <div class="skill">
+        <span>JavaScript</span>
+        <div class="bar"><div class="progress" data-value="85%"></div></div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Projects Portfolio</h2>
+      <div>
+        <button data-category="all">All</button>
+        <button data-category="Web">Web</button>
+        <button data-category="Data">Data</button>
+        <button data-category="AI">AI</button>
+      </div>
+      <div id="project-list"></div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog">
+      <h2>Blog</h2>
+      <input type="text" id="search" placeholder="Search blog..." />
+      <div id="blog-posts"></div>
+    </section>
+
+    <!-- FAQ Tabs -->
+    <section id="faq">
+      <h2>FAQ</h2>
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="q1">What is this site?</button>
+        <button class="tab-btn" data-tab="q2">Who made it?</button>
+      </div>
+      <div class="tab-content active" id="q1">A portfolio built with HTML/CSS/JS!</div>
+      <div class="tab-content" id="q2">Made by Nadia Maria 👋</div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form id="contact-form">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Nadia Maria</p>
+  </footer>
+
+  <!-- Modal Popup -->
+  <div id="project-modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="modal-close">&times;</span>
+      <h3 id="modal-title"></h3>
+      <p id="modal-desc"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
