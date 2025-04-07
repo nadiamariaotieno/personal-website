@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener("DOMContentLoaded", () => {
   // Dynamic Greeting
   const greeting = document.getElementById("greeting");
@@ -30,15 +29,25 @@ document.addEventListener("DOMContentLoaded", () => {
   setupModal();
 });
 
+// ✅ FIXED SKILL BAR ANIMATION
 function animateSkills() {
-  window.addEventListener("scroll", () => {
+  const animateBars = () => {
     document.querySelectorAll('.progress').forEach(bar => {
       const rect = bar.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom >= 0) {
+      const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+      const isAlreadyFilled = bar.style.width && bar.style.width !== "0px";
+
+      if (isVisible && !isAlreadyFilled) {
         bar.style.width = bar.dataset.value;
+
+        // Optional fade/slide effect
+        bar.closest(".skill").classList.add("visible");
       }
     });
-  }, { once: true });
+  };
+
+  animateBars(); // run immediately
+  window.addEventListener("scroll", animateBars); // run on scroll
 }
 
 function loadProjects() {
@@ -66,7 +75,7 @@ function loadProjects() {
   const list = document.getElementById("project-list");
   list.innerHTML = projects.map((project, index) => `
     <div class="project-card" data-id="${index}" data-category="${project.category}">
-      <img src="${project.image}" alt="${project.title}">
+      <img src="${project.image}" alt="${project.title}" onerror="this.src='assets/default.jpg'">
       <h3>${project.title}</h3>
       <p>${project.category}</p>
     </div>
@@ -93,7 +102,10 @@ function setupModal() {
   document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('click', () => {
       const projectId = card.dataset.id;
-      const project = projects[projectId];
+      const project = {
+        title: card.querySelector('h3').textContent,
+        desc: card.querySelector('p').textContent
+      };
       modalTitle.textContent = project.title;
       modalDesc.textContent = project.desc;
       modal.classList.remove('hidden');
