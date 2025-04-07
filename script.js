@@ -119,3 +119,35 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     document.getElementById(btn.dataset.tab).classList.add('active');
   });
 });
+
+{
+  // Theme toggle
+  const themeToggle = document.getElementById('theme-toggle');
+  themeToggle.addEventListener('click', () => {
+    document.body.dataset.theme = 
+      document.body.dataset.theme === 'dark' ? 'light' : 'dark';
+    themeToggle.textContent = document.body.dataset.theme === 'dark' ? '🌙' : '🌞';
+  });
+
+  // Animate skill bars
+  document.querySelectorAll('.progress').forEach(bar => {
+    bar.style.width = bar.dataset.value;
+  });
+
+  // Modal functionality
+  const modal = document.getElementById('project-modal');
+  document.getElementById('modal-close').addEventListener('click', () => {
+    modal.classList.add('hidden');
+  });
+
+  // Tab functionality
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+    });
+  });
+});
