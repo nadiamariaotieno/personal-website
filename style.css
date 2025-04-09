@@ -323,5 +323,35 @@ button[type="submit"]:hover {
   }
 }
 
+/* === Project Filter Buttons: Frosted Glass Style === */
+.project-filters {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.project-filters button {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 0.5rem 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.project-filters button:hover,
+.project-filters button.active {
+  background: var(--accent);
+  color: #121212;
+  transform: scale(1.05);
+  border-color: var(--accent);
+}
+
 /* Font Import */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
