@@ -142,6 +142,20 @@ header, section, footer {
   transition: transform 0.3s ease;
 }
 
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+  .project-card img {
+    height: 150px;
+  }
+}
+
 .project-card:hover {
   transform: translateY(-5px);
 }
