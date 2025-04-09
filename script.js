@@ -53,19 +53,19 @@ function animateSkills() {
 function loadProjects() {
   const projects = [
     { 
-      title: "WebApp 1", 
+      title: "voting System", 
       category: "Web", 
       desc: "A responsive website using HTML/CSS/JS.",
       image: "assets/webapp1.jpg"
     },
     { 
-      title: "AI Bot", 
+      title: "Web Application", 
       category: "AI", 
       desc: "Conversational AI built with TensorFlow.js",
       image: "assets/ai-bot.jpg"
     },
     { 
-      title: "Data Dashboard", 
+      title: "Data Mining Dashboard", 
       category: "Data", 
       desc: "Real-time analytics dashboard",
       image: "assets/dashboard.jpg"
