@@ -62,7 +62,7 @@ function loadProjects() {
       title: "Premier League Table", 
       category: "AI", 
       desc: "A depiction of the Premier league table built using THTM and CSS.",
-      image: "assets/ai-chatbot.jpg"
+      image: "Capture.JPG"
     },
     { 
       title: "Data Mining Dashboard", 
