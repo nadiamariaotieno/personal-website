@@ -120,16 +120,16 @@ function setupModal() {
 
 function loadBlogPosts() {
   const posts = [
-    { 
-      title: "Web Development Basics", 
-      content: "Getting started with modern web development...",
-      date: "2024-03-01"
-    },
-    { 
-      title: "JavaScript Best Practices", 
-      content: "Clean code techniques for JS developers...",
-      date: "2024-03-15"
-    }
+    {
+  title: "Why I Chose to Study Applied Computer Technology",
+  content: "From a young age, I've always been curious about how technology works — not just using it, but understanding the logic behind it. I chose Applied Computer Technology because it blends practical skills with real-world problem-solving. The hands-on nature of the course allows me to build applications, experiment with networks, explore AI, and dive into data analysis. My ultimate dream is to work at the intersection of technology and health — especially in biomedical engineering — where I can create meaningful solutions that improve lives. Studying Applied Computer Technology gives me the foundation I need to turn that vision into reality.",
+  date: "2025-04-09"
+},
+    {
+  title: "My Future in Biomedical Technology",
+  content: "As I continue to grow in the tech field, my vision is to specialize in biomedical technology — a space where innovation truly saves lives. I'm deeply inspired by how computer systems, artificial intelligence, and data science are being used to solve real health problems. Whether it's building smart diagnostic tools, improving patient data systems, or designing wearable health devices, I want to contribute to the future of healthcare. After completing my Bachelor's in Applied Computer Technology, I plan to pursue a Master’s in Biomedical Engineering. Combining technology with medicine feels like the most impactful path I can take, and I'm excited for what lies ahead.",
+  date: "2025-04-09"
+}
   ];
 
   const container = document.getElementById("blog-posts");
