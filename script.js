@@ -56,7 +56,7 @@ function loadProjects() {
       title: "Library ManagementSystem", 
       category: "Web", 
       desc: "An online library platform using HTML, CSS and javascript.",
-      image: "assets/voting-system.jpg"
+      image: "Lib mngmt system.JPG"
     },
     { 
       title: "Premier League Table", 
