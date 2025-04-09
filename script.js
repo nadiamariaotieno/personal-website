@@ -67,8 +67,8 @@ function loadProjects() {
     { 
       title: "Food Ordering System", 
       category: "HTML, CSS, JavaScript", 
-      desc: "A dashboard that displays insights from web-mined data.",
-      image: "assets/data-dashboard.jpg"
+      desc: "A Food Ordering System.",
+      image: "gourmet.jpg"
     }
   ];
 
