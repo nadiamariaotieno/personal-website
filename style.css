@@ -98,33 +98,61 @@ header, section, footer {
   box-shadow: 0 0 20px rgba(0,0,0,0.4);
 }
 
-.skill {
-  margin: 2rem 0;
+/* ==== Radial Skill Chart ==== */
+.circle-skills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-.bar {
-  background: rgba(255, 255, 255, 0.1);
-  height: 20px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  overflow: hidden;
+.circle-skill {
+  text-align: center;
 }
 
-.progress {
-  background: var(--primary);
-  height: 100%;
-  width: 0;
-  transition: width 2s ease;
-  position: relative;
+.circular-chart {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+  transform: rotate(-90deg);
 }
 
-.progress::after {
-  content: attr(data-value);
-  position: absolute;
-  right: 10px;
-  color: white;
-  font-size: 0.8rem;
+.circle-bg {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 3.8;
 }
+
+.circle {
+  fill: none;
+  stroke: var(--primary);
+  stroke-width: 3.8;
+  stroke-linecap: round;
+  stroke-dasharray: 0, 100;
+  animation: fill 1s ease forwards;
+}
+
+.percentage {
+  fill: var(--text);
+  font-size: 0.5em;
+  text-anchor: middle;
+  transform: rotate(90deg);
+  transform-origin: center;
+}
+
+@keyframes fill {
+  from {
+    stroke-dasharray: 0, 100;
+  }
+}
+
+/* Optional per-skill colors */
+.circle.html { stroke: #e34c26; }
+.circle.css { stroke: #2965f1; }
+.circle.js { stroke: #f0db4f; }
+
 
 /* Projects */
 #project-list {
