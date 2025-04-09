@@ -53,15 +53,15 @@ function animateSkills() {
 function loadProjects() {
   const projects = [
     { 
-      title: "Voting System", 
+      title: "Library ManagementSystem", 
       category: "Web", 
-      desc: "An online voting platform using HTML, CSS, and JavaScript.",
+      desc: "An online library platform using HTML, CSS and javascript.",
       image: "assets/voting-system.jpg"
     },
     { 
-      title: "AI Chatbot", 
+      title: "Premier League Table", 
       category: "AI", 
-      desc: "An intelligent chatbot built using TensorFlow.js and JavaScript.",
+      desc: "A depiction of the Premier league table built using THTM and CSS.",
       image: "assets/ai-chatbot.jpg"
     },
     { 
