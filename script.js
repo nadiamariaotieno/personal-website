@@ -62,7 +62,7 @@ function loadProjects() {
       title: "Premier League Table", 
       category: "AI", 
       desc: "A depiction of the Premier league table built using THTM and CSS.",
-      image: "capture.jpg"
+      image: "premier.jpg"
     },
     { 
       title: "Data Mining Dashboard", 
