@@ -108,16 +108,21 @@ header, section, footer {
 }
 
 .circle-skill {
+  width: 120px;
+  max-width: 100%;
   text-align: center;
 }
 
 .circular-chart {
   width: 100px;
   height: 100px;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
   display: block;
   margin: 0 auto;
   transform: rotate(-90deg);
 }
+
 
 .circle-bg {
   fill: none;
@@ -141,6 +146,18 @@ header, section, footer {
   transform: rotate(90deg);
   transform-origin: center;
 }
+
+@media (max-width: 600px) {
+  .circular-chart {
+    width: 80px;
+    height: 80px;
+  }
+
+  .circle-skill {
+    width: 100px;
+  }
+}
+
 
 @keyframes fill {
   from {
