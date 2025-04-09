@@ -54,19 +54,19 @@ function loadProjects() {
   const projects = [
     { 
       title: "Library ManagementSystem", 
-      category: "Web", 
+      category: "HTML, CSS, JavaScript", 
       desc: "An online library platform using HTML, CSS and javascript.",
       image: "library-system.jpg"
     },
     { 
       title: "Premier League Table", 
-      category: "AI", 
-      desc: "A depiction of the Premier league table built using THTM and CSS.",
+      category: "HTML, CSS", 
+      desc: "A depiction of the Premier league table built using HTML and CSS.",
       image: "premier.jpg"
     },
     { 
-      title: "Data Mining Dashboard", 
-      category: "Data", 
+      title: "Food Ordering System", 
+      category: "HTML, CSS, JavaScript", 
       desc: "A dashboard that displays insights from web-mined data.",
       image: "assets/data-dashboard.jpg"
     }
