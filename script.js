@@ -53,22 +53,22 @@ function animateSkills() {
 function loadProjects() {
   const projects = [
     { 
-      title: "voting System", 
+      title: "Voting System", 
       category: "Web", 
-      desc: "A responsive website using HTML/CSS/JS.",
-      image: "assets/webapp1.jpg"
+      desc: "An online voting platform using HTML, CSS, and JavaScript.",
+      image: "assets/voting-system.jpg"
     },
     { 
-      title: "Web Application", 
+      title: "AI Chatbot", 
       category: "AI", 
-      desc: "Conversational AI built with TensorFlow.js",
-      image: "assets/ai-bot.jpg"
+      desc: "An intelligent chatbot built using TensorFlow.js and JavaScript.",
+      image: "assets/ai-chatbot.jpg"
     },
     { 
       title: "Data Mining Dashboard", 
       category: "Data", 
-      desc: "Real-time analytics dashboard",
-      image: "assets/dashboard.jpg"
+      desc: "A dashboard that displays insights from web-mined data.",
+      image: "assets/data-dashboard.jpg"
     }
   ];
 
@@ -81,7 +81,7 @@ function loadProjects() {
     </div>
   `).join("");
 
-  // Project Filtering
+  // Filtering logic (if buttons exist)
   document.querySelectorAll('[data-category]').forEach(btn => {
     btn.addEventListener('click', () => {
       const category = btn.dataset.category;
