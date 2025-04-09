@@ -137,6 +137,7 @@ header, section, footer {
   stroke-linecap: round;
   stroke-dasharray: 0, 100;
   animation: fill 1s ease forwards;
+  filter: drop-shadow(0 0 4px var(--primary));
 }
 
 .percentage {
@@ -145,6 +146,11 @@ header, section, footer {
   text-anchor: middle;
   transform: rotate(90deg);
   transform-origin: center;
+}
+
+.circle-skill:hover .circular-chart {
+  scale: 1.05;
+  transition: transform 0.3s ease;
 }
 
 @media (max-width: 600px) {
